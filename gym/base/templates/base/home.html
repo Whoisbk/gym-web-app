@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<h1>home page {{fname}}</h1>
+<button type="submit"><a href="/signout">SignOut</a</button>
+{% else %}
+<h2>You have not logged in</h2>
+<button type="submit"><a href="/signout">SignOut</a></button>
+<button type="submit"><a href="/signin">Signin</a</button>
+<button type="submit"> <a href="/register">Register</a></button>
+{% endif %}
+
+{% endblock content %}
